@@ -1,0 +1,49 @@
+.appHeader {
+	background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0%,#159ecc),color-stop(100%,#157fcc));
+    background-image: -webkit-linear-gradient(top,#159ecc,#157fcc);
+    background-image: -moz-linear-gradient(top,#159ecc,#157fcc);
+    background-image: -o-linear-gradient(top,#159ecc,#157fcc);
+    background-image: -ms-linear-gradient(top,#159ecc,#157fcc);
+    background-image: linear-gradient(top,#159ecc,#157fcc); 
+    border-bottom: 1px solid #008080;
+    margin-bottom: 2px;
+}
+
+.appHeaderTitle .x-panel-body {
+	background-color: transparent;
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAexJREFUeNq01UsoRFEYB/A70wxiRDY2bEgoEZGSkiwsvIasNCl2FoSFMh7NhsmKRJGlxZQyZe9RaiyIhVKYFQZFSB6Nxxj/r75bp9udmXOvfPVrZu6cc7/vnHvOuZZAXoaCyIR1qFH0IwydsKUYDCt/lkIVpMRABdSBxWwCqjw9QdtmyDKTgG7cING2DAri/J+vVyQlyOXhyxTTqrlmgxKYh2PwgUPbqR7skiNuF743wjIcQD+kQhNfc4gVuAxMaRGMQzm0xCisC55hCD5oBOcGEpxCH3QkGDW1mVCnqJeH+BCnQxRWeTGcSBYzBqOUIAIL/AB3dRpS4kHohhu4NjDiSavwYw+c4KW542sBaONVosaFgQQ+m+bCE7jhFgphir+LEZK8+T3M2HT+oH3RwwnooPLDkVC57KJYgjObzsaZ42Wo8BJ2cdV+PuyiEjenIlbEs0gNNy9BbeTAAGxwG9pM+/Cq0/YbFuFKrVgNJ3dOFNkwDGl8ylLyCqiEarjjAhQxAc33NCRLJAizd36QQdjho9zOU/glJqDz3gPFkg/vh+ltxs9Y74OQ8k9h5eF6YuxivYiYeaO98QN+lOiTZCaBeix4JfoEjSTQbrRZqOXzRwzayZu89g//koDmd4RX1AuswTZc8vo2HL8CDADTNWLIAgkiQwAAAABJRU5ErkJggg==');
+	background-repeat: no-repeat;
+	background-position: 5px 2px;
+	padding: 5px 0px 0px 32px;
+	border: none;
+	color: white;
+	font-size: 22px;
+	font-weight: 200;
+	white-space: nowrap;
+}
+
+.userName {
+	font-size: 12px;
+	font-weight: bold;
+	color: #BFBFBF;
+	text-align: right;
+	padding-right: 5px;
+}
+
+.monospace {
+	font-family: Consolas, Monaco, Lucida Console, Liberation Mono,
+		DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+.x-form-item-label-bold .x-form-item-label {
+	font-weight: bold;
+}
+/* gray out the unselectable nodes*/
+.x-tree-node-text-disable {
+	font-style: italic;
+	color: gray;
+}
+/*Remove folder icon from tree */
+.x-tree-noicon .x-tree-icon-parent, .x-tree-noicon .x-grid-row  .x-tree-icon-leaf  {
+	display: none !important;
+}

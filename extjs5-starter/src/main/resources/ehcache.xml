@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ehcache.xsd" updateCheck="false" monitoring="autodetect" dynamicConfig="true">
+	<diskStore path="user.dir"/>
+	<defaultCache maxEntriesLocalHeap="0" eternal="false" timeToIdleSeconds="1200" timeToLiveSeconds="1200">
+	</defaultCache>
+	
+	<!--
+
+		Sample cache named sampleCache1
+		This cache contains a maximum in memory of 10000 elements, and will expire
+		an element if it is idle for more than 5 minutes and lives for more than
+		10 minutes.
+
+		If there are more than 10000 elements it will overflow to the
+		disk cache, which in this configuration will go to wherever java.io.tmp is
+		defined on your system. On a standard Linux system this will be /tmp"
+
+-->
+	<!--cache name="sampleCache1" maxEntriesLocalHeap="10000" maxEntriesLocalDisk="1000" eternal="false" diskSpoolBufferSizeMB="20" timeToIdleSeconds="300" timeToLiveSeconds="600" memoryStoreEvictionPolicy="LFU" transactionalMode="off">
+			<persistence strategy="localTempSwap"/>
+		</cache-->
+		
+	<cache name="hierarchyCache"
+		maxElementsInMemory="1000"
+		eternal="false"
+		timeToIdleSeconds="120"
+		timeToLiveSeconds="120"
+		overflowToDisk="true"
+		maxElementsOnDisk="10000000"
+		diskPersistent="false"
+		diskExpiryThreadIntervalSeconds="120"
+		memoryStoreEvictionPolicy="LRU"/>
+		
+	<cache name="metaDataCache"
+		maxElementsInMemory="100"
+		eternal="false"
+		timeToIdleSeconds="120"
+		timeToLiveSeconds="120"
+		overflowToDisk="true"
+		maxElementsOnDisk="10000000"
+		diskPersistent="false"
+		diskExpiryThreadIntervalSeconds="120"
+		memoryStoreEvictionPolicy="LRU"/>
+		
+	<cache name="modelDescriptionsCache"
+		maxElementsInMemory="10000"
+		eternal="false"
+		timeToIdleSeconds="120"
+		timeToLiveSeconds="120"
+		overflowToDisk="true"
+		maxElementsOnDisk="10000000"
+		diskPersistent="false"
+		diskExpiryThreadIntervalSeconds="120"
+		memoryStoreEvictionPolicy="LRU"/>
+		
+	<cache name="MdTenorRefsWithDistinctNameCache"
+		maxElementsInMemory="10000"
+		eternal="false"
+		timeToIdleSeconds="120"
+		timeToLiveSeconds="120"
+		overflowToDisk="true"
+		maxElementsOnDisk="10000000"
+		diskPersistent="false"
+		diskExpiryThreadIntervalSeconds="120"
+		memoryStoreEvictionPolicy="LRU"/>
+		
+	<cache name="PaymentFrequenciesWithDistinctFreqCodeCache"
+		maxElementsInMemory="10000"
+		eternal="false"
+		timeToIdleSeconds="120"
+		timeToLiveSeconds="120"
+		overflowToDisk="true"
+		maxElementsOnDisk="10000000"
+		diskPersistent="false"
+		diskExpiryThreadIntervalSeconds="120"
+		memoryStoreEvictionPolicy="LRU"/>
+		
+	<cache name="MdCurveMstrsWithDistinctcurveCodeCache"
+		maxElementsInMemory="10000"
+		eternal="false"
+		timeToIdleSeconds="120"
+		timeToLiveSeconds="120"
+		overflowToDisk="true"
+		maxElementsOnDisk="10000000"
+		diskPersistent="false"
+		diskExpiryThreadIntervalSeconds="120"
+		memoryStoreEvictionPolicy="LRU"/>
+		
+	<cache name="modelAssignGocCache"
+		maxElementsInMemory="1000000"
+		eternal="false"
+		timeToIdleSeconds="120"
+		timeToLiveSeconds="120"
+		overflowToDisk="true"
+		maxElementsOnDisk="1000000000"
+		diskPersistent="false"
+		diskExpiryThreadIntervalSeconds="120"
+		memoryStoreEvictionPolicy="LRU"/>	
+		
+	<cache name="lookupCache"
+		maxElementsInMemory="100"
+		eternal="false"
+		overflowToDisk="false"/>
+	
+	
+	<cache name="getGocListCache"
+		maxElementsInMemory="10000"
+		eternal="false"
+		timeToIdleSeconds="120"
+		timeToLiveSeconds="120"
+		overflowToDisk="true"
+		maxElementsOnDisk="10000000"
+		diskPersistent="false"
+		diskExpiryThreadIntervalSeconds="120"
+		memoryStoreEvictionPolicy="LRU"/>
+	
+	<cache name="getAcctsCache"
+		maxElementsInMemory="10000"
+		eternal="false"
+		timeToIdleSeconds="120"
+		timeToLiveSeconds="120"
+		overflowToDisk="true"
+		maxElementsOnDisk="10000000"
+		diskPersistent="false"
+		diskExpiryThreadIntervalSeconds="120"
+		memoryStoreEvictionPolicy="LRU"/>
+</ehcache>
